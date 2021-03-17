@@ -1,0 +1,10 @@
+*.gem
+.bundle
+Gemfile.lock
+vendor/bundle
+tmp
+.rvmrc
+.ruby-version
+.yardoc
+.idea/
+.yardoc/
