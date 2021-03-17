@@ -1,0 +1,17 @@
+name: openpay-sdk CI
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main, develop]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Build docker
+      run: docker build . -t openpay-sdk:latest
+    - name: Run Tests
+      run: docker run --rm openpay-sdk:latest rake test
