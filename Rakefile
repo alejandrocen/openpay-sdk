@@ -5,8 +5,8 @@ require 'rubocop/rake_task'
 
 task default: %i[test rubocop]
 
-Rake::TestTask.new do |t|
-  t.pattern = 'test/**/*_test.rb'
+Rake::TestTask.new do |task|
+  task.pattern = 'test/**/*_test.rb'
 end
 
 RuboCop::RakeTask.new
