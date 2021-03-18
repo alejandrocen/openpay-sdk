@@ -6,25 +6,24 @@ module Openpay
   DEFAULT_TIMEOUT = 90
 
   class Enviroment
-    attr_reader :client_id, :client_secret, :api_url, :options
+    attr_reader :client_id, :client_secret, :api_url
 
-    def initialize(client_id, client_secret, api_url, options = {})
+    def initialize(client_id, client_secret, api_url)
       @client_id = client_id
       @client_secret = client_secret
       @api_url = api_url
-      @options = options
     end
   end
 
   class SandboxEnvironment < Enviroment
-    def initialize(client_id, client_secret, options = {})
-      super(client_id, client_secret, Openpay::SANDBOX_API_URL, options)
+    def initialize(client_id, client_secret)
+      super(client_id, client_secret, Openpay::SANDBOX_API_URL)
     end
   end
 
   class LiveEnvironment < Enviroment
-    def initialize(client_id, client_secret, options = {})
-      super(client_id, client_secret, Openpay::LIVE_API_URL, options)
+    def initialize(client_id, client_secret)
+      super(client_id, client_secret, Openpay::LIVE_API_URL)
     end
   end
 end
