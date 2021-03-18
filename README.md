@@ -18,7 +18,7 @@ openpay-sdk$ docker run --rm \
 
 ```bash
 openpay-sdk$ export CLIENT_ID=mzdtln0bmtms6o3kck8f
-openpay-sdk$ export CLIENT_ID=sk_e568c42a6c384b7ab02cd47d2e407cab
+openpay-sdk$ export CLIENT_SECRET=sk_e568c42a6c384b7ab02cd47d2e407cab
 ```
 
 ```bash
