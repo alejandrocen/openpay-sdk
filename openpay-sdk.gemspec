@@ -15,6 +15,8 @@ Gem::Specification.new do |spec|
   spec.files                 = Dir['{lib}/**/*', 'LICENSE']
   spec.require_paths         = %w[lib]
 
+  spec.add_dependency 'excon', '~> 0.79.0'
+
   spec.add_development_dependency 'byebug', '~> 11.1'
   spec.add_development_dependency 'minitest', '~> 5.14'
   spec.add_development_dependency 'rake', '~> 13.0'

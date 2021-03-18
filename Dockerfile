@@ -12,4 +12,3 @@ RUN bundle install
 
 COPY test/ test/
 COPY Rakefile .
-
