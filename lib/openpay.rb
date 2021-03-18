@@ -2,7 +2,7 @@
 
 require 'excon'
 
-require 'openpay/enviroment'
+require 'openpay/environment'
 require 'openpay/http_client'
 require 'openpay/request'
 require 'openpay/version'

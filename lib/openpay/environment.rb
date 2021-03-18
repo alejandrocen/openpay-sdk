@@ -5,7 +5,7 @@ module Openpay
   LIVE_API_URL = 'https://api.openpay.mx/v1/'
   DEFAULT_TIMEOUT = 90
 
-  class Enviroment
+  class Environment
     attr_reader :client_id, :client_secret, :api_url
 
     def initialize(client_id, client_secret, api_url)
@@ -15,13 +15,13 @@ module Openpay
     end
   end
 
-  class SandboxEnvironment < Enviroment
+  class SandboxEnvironment < Environment
     def initialize(client_id, client_secret)
       super(client_id, client_secret, Openpay::SANDBOX_API_URL)
     end
   end
 
-  class LiveEnvironment < Enviroment
+  class LiveEnvironment < Environment
     def initialize(client_id, client_secret)
       super(client_id, client_secret, Openpay::LIVE_API_URL)
     end
