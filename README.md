@@ -17,6 +17,11 @@ openpay-sdk$ docker run --rm \
 ## Run Tests Without Docker
 
 ```bash
+openpay-sdk$ export CLIENT_ID=mzdtln0bmtms6o3kck8f
+openpay-sdk$ export CLIENT_ID=sk_e568c42a6c384b7ab02cd47d2e407cab
+```
+
+```bash
 openpay-sdk$ bundle install
 ```
 
