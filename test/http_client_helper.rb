@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require 'forwardable'
+
 class HttpClientHelper
   extend Forwardable
 
