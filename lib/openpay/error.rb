@@ -2,23 +2,21 @@
 
 module Openpay
   class Error < StandardError
-    def self.from(response)
-      http_status = response.status
-
-      if http_status.to_s.empty? || [0, 1].include?(http_status)
-        NoConnectionError.new('No se pudo conectar al sistema de pagos.')
+    def self.from(exception)
+      if exception.respond_to?(:response)
+        ApiError.new(JSON.parse(exception.response.body))
       else
-        ApiError.new(JSON.parse(response.body))
+        NoConnectionError.new('Could not connect to payment system.')
       end
     end
   end
 
   class ApiError < Error
-    attr_reader :category, :description, :http_code, :error_code, :request_id
+    attr_reader :description, :category, :http_code, :error_code, :request_id
 
     def initialize(body = {})
-      @category = body['category']
       @description = body['description']
+      @category = body['category']
       @http_code = body['http_code']
       @error_code = body['error_code']
       @request_id = body['request_id']
