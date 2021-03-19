@@ -4,7 +4,7 @@ module Openpay
   module Charges
     class GetRequest < Request
       def initialize
-        super('charges', 'GET')
+        super('charges', :get)
       end
     end
   end

@@ -3,10 +3,12 @@
 module Openpay
   class Error < StandardError
     def self.from(exception)
-      if exception.respond_to?(:response)
-        ApiError.new(JSON.parse(exception.response.body))
-      else
+      return Error.new(exception) unless exception.is_a?(Faraday::Error)
+
+      if exception.response_status.nil?
         NoConnectionError.new('Could not connect to payment system.')
+      else
+        ApiError.new(JSON.parse(exception.response[:body]))
       end
     end
   end

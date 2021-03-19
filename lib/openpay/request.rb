@@ -2,11 +2,15 @@
 
 module Openpay
   class Request
-    attr_reader :path, :verb_http
+    METHODS = %i[get post put delete].freeze
 
-    def initialize(path, verb_http)
+    attr_reader :path, :http_method
+
+    def initialize(path, http_method)
+      raise ArgumentError, "Unknown http method: #{http_method}" unless Request::METHODS.include?(http_method)
+
       @path = path
-      @verb_http = verb_http
+      @http_method = http_method
     end
   end
 end

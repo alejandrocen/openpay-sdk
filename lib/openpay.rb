@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require 'json'
-require 'excon'
+require 'faraday'
 
 require 'openpay/environment'
 require 'openpay/error'
