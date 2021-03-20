@@ -3,6 +3,7 @@
 require 'json'
 require 'faraday'
 
+require 'openpay/connection'
 require 'openpay/environment'
 require 'openpay/error'
 require 'openpay/http_client'

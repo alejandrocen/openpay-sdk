@@ -3,7 +3,6 @@
 module Openpay
   SANDBOX_API_URL = 'https://sandbox-api.openpay.mx/v1/'
   LIVE_API_URL = 'https://api.openpay.mx/v1/'
-  DEFAULT_TIMEOUT = 90
 
   class Environment
     attr_reader :client_id, :client_secret, :api_url

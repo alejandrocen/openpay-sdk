@@ -2,23 +2,22 @@
 
 module Openpay
   class HttpClient
-    attr_accessor :timeout
-
     def initialize(environment, options = {})
       @environment = environment
-      @base_url = "#{@environment.api_url}/#{@environment.client_id}"
-      @timeout = options[:timeout] || DEFAULT_TIMEOUT
+      @options = default_configuration.merge(options)
+      @connection = Connection.new(@environment, @options).connection
     end
 
     def execute(request)
-      connection = Faraday.new(url: "#{@base_url}/#{request.path}") do |conn|
-        conn.use Faraday::Response::RaiseError
-        conn.options.timeout = @timeout
-        conn.basic_auth(@environment.client_secret, '')
-      end
-      connection.send(request.http_method)
+      @connection.send(request.http_method, request.path)
     rescue StandardError => e
       raise Error.from(e)
+    end
+
+    private
+
+    def default_configuration
+      { timeout: 90 }
     end
   end
 end
