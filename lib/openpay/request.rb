@@ -2,7 +2,7 @@
 
 module Openpay
   class Request
-    METHODS = %i[get post put delete].freeze
+    METHODS = %i[get post put patch delete].freeze
 
     attr_reader :path, :http_method
 
