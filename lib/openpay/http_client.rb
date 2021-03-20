@@ -4,7 +4,7 @@ module Openpay
   class HttpClient
     def initialize(environment, options = {})
       @environment = environment
-      @options = default_configuration.merge(options)
+      @options = ConnectionOptions.from(options)
       @connection = Connection.new(@environment, @options).connection
     end
 
@@ -15,12 +15,6 @@ module Openpay
       end
     rescue StandardError => e
       raise Error.from(e)
-    end
-
-    private
-
-    def default_configuration
-      { timeout: 90 }
     end
   end
 end
