@@ -2,17 +2,17 @@
 
 module Openpay
   class HttpClient
-    attr_accessor :timeout
-
     def initialize(environment, options = {})
       @environment = environment
-      @timeout = options[:timeout] || DEFAULT_TIMEOUT
+      @options = ConnectionOptions.from(options)
+      @connection = Connection.new(@environment, @options).connection
     end
 
     def execute(request)
-      url = "#{@environment.api_url}/#{@environment.client_id}/#{request.path}"
-      connection = Excon.new(url, user: @environment.client_secret)
-      connection.request(expects: [200, 201, 204], read_timeout: @timeout, method: request.verb_http)
+      @connection.send(request.http_method, request.path) do |conn|
+        conn.params = request.params || {}
+        conn.body = request.body if request.body
+      end
     rescue StandardError => e
       raise Error.from(e)
     end

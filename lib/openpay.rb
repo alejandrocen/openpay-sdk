@@ -1,8 +1,10 @@
 # frozen_string_literal: true
 
 require 'json'
-require 'excon'
+require 'faraday'
 
+require 'openpay/connection_options'
+require 'openpay/connection'
 require 'openpay/environment'
 require 'openpay/error'
 require 'openpay/http_client'
