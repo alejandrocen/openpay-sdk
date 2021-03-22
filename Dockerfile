@@ -12,3 +12,5 @@ RUN bundle install
 
 COPY test/ test/
 COPY Rakefile .
+COPY .rubocop.yml .
+COPY .rubocop_todo.yml .
