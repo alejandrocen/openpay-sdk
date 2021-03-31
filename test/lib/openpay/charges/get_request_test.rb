@@ -2,11 +2,7 @@
 
 require_relative '../../../test_helper'
 
-class GetRequestTest < Minitest::Test
-  def setup
-    @client = HttpClientHelper.new
-  end
-
+class GetRequestTest < RequestTest
   def test_get_charges
     request = Openpay::Charges::GetRequest.new
     response = @client.execute(request)
@@ -24,7 +20,7 @@ class GetRequestTest < Minitest::Test
     assert_equal(1, JSON.parse(response.body).count)
   end
 
-  def test_get_charges_by_transacion_id
+  def test_get_charges_by_transaction_id
     transaction_id = 'trqj3v2vliza4noj0ehh'
     request = Openpay::Charges::GetRequest.new(transaction_id)
     response = @client.execute(request)
