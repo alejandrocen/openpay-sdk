@@ -2,7 +2,7 @@
 
 require_relative '../../../test_helper'
 
-class GetRequestTest < RequestTest
+class ChargesGetRequestTest < RequestTest
   def test_get_charges
     request = Openpay::Charges::GetRequest.new
     response = @client.execute(request)
