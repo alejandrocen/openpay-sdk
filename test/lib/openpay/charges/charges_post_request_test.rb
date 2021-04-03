@@ -4,15 +4,24 @@ require_relative '../../../test_helper'
 
 class ChargesPostRequestTest < RequestTest
   def test_create_charge
-    charge_params = @fixtures[:charge].merge(
-      source_id: 'kwoytmpdy3ctqlyooi5f',
-      order_id: SecureRandom.hex(20),
-      device_session_id: '03QKX08AUPvoJyxY6PP0Xu9kC7Mabusw'
-    )
     VCR.use_cassette('test_create_charge') do
-      request = Openpay::Charges::PostRequest.new { |req| req.body = charge_params }
+      request = Openpay::Charges::PostRequest.new { |req| req.body = @fixtures[:charge] }
       response = @client.execute(request)
       assert_equal(200, response.status)
     end
+  end
+
+  def test_create_charge_with_invalid_source_id
+    error = assert_raises(Openpay::ApiError) do
+      VCR.use_cassette('test_create_charge_with_invalid_source_id') do
+        request = Openpay::Charges::PostRequest.new { |req| req.body = @fixtures[:charge] }
+        @client.execute(request)
+      end
+    end
+
+    assert_equal('This source_id was already used', error.message)
+    assert_equal(422, error.http_code)
+    assert_equal(1003, error.error_code)
+    assert_equal('request', error.category)
   end
 end
