@@ -1,0 +1,58 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://sandbox-api.openpay.mx/v1/mxibgczgkhrnyyeg01kz/cards
+    body:
+      encoding: UTF-8
+      string: '{"card_number":4111111111111111,"holder_name":"Juan Perez Ramirez","expiration_year":21,"expiration_month":12,"cvv2":110}'
+    headers:
+      Authorization:
+      - Basic c2tfZTRkMmY2OTMwNjNiNGZiOGExNTNhYjRiN2E4MWQ1NDc6
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Ruby - Openpay SDK v0.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 201
+      message: ''
+    headers:
+      Date:
+      - Sat, 03 Apr 2021 16:33:44 GMT
+      Content-Type:
+      - application/json;charset=UTF-8
+      Content-Length:
+      - '317'
+      Connection:
+      - keep-alive
+      Openpay-Request-Id:
+      - eac888f3-ee08-403b-9a53-0b382db77c58
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Pragma:
+      - no-cache
+      Expires:
+      - '0'
+      Strict-Transport-Security:
+      - max-age=31536000 ; includeSubDomains
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - DENY
+      X-Content-Type-Options:
+      - nosniff
+      Resource-Id:
+      - kdpa1madszyrljckqzc0
+      Location:
+      - https://sandbox-api.openpay.mx/v1/mxibgczgkhrnyyeg01kz/cards/kdpa1madszyrljckqzc0
+    body:
+      encoding: UTF-8
+      string: '{"id":"kdpa1madszyrljckqzc0","type":"debit","brand":"visa","address":null,"card_number":"411111XXXXXX1111","holder_name":"Juan
+        Perez Ramirez","expiration_year":"21","expiration_month":"12","allows_charges":true,"allows_payouts":true,"creation_date":"2021-04-03T10:33:44-06:00","bank_name":"Banamex","bank_code":"002"}'
+  recorded_at: Sat, 03 Apr 2021 16:33:44 GMT
+recorded_with: VCR 6.0.0
