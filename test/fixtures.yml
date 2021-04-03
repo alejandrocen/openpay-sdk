@@ -1,6 +1,19 @@
-card:
-  card_number: 4111111111111111
-  holder_name: Juan Perez Ramirez
-  expiration_year: 21
-  expiration_month: 12
-  cvv2: 110
+:card:
+  :card_number: 4111111111111111
+  :holder_name: Juan Perez Ramirez
+  :expiration_year: 21
+  :expiration_month: 12
+  :cvv2: 110
+:charge:
+  :source_id: required
+  :method: card
+  :amount: 1000
+  :currency: MXN
+  :description: Cargo inicial a mi cuenta
+  :order_id: required
+  :device_session_id: required
+  :customer:
+    :name: Juan
+    :last_name: Vazquez Juarez
+    :phone_number: 4423456723
+    :email: juan.vazquez@empresa.com.mx

@@ -1,0 +1,56 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://sandbox-api.openpay.mx/v1/mxibgczgkhrnyyeg01kz/charges
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Basic c2tfZTRkMmY2OTMwNjNiNGZiOGExNTNhYjRiN2E4MWQ1NDc6
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Ruby - Openpay SDK v0.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Date:
+      - Sat, 03 Apr 2021 16:25:00 GMT
+      Content-Type:
+      - application/json;charset=UTF-8
+      Content-Length:
+      - '969'
+      Connection:
+      - keep-alive
+      Openpay-Request-Id:
+      - ba2e7aa6-fa01-44d7-8982-d72aa1ebe4a4
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Pragma:
+      - no-cache
+      Expires:
+      - '0'
+      Strict-Transport-Security:
+      - max-age=31536000 ; includeSubDomains
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - DENY
+      X-Content-Type-Options:
+      - nosniff
+    body:
+      encoding: UTF-8
+      string: '[{"id":"tr6oykqjyjtwo9hia9fl","authorization":"801585","operation_type":"in","transaction_type":"charge","card":{"id":"k4msykutiaestjikvduy","type":"debit","brand":"visa","address":null,"card_number":"411111XXXXXX1111","holder_name":"Juan
+        Perez Ramirez","expiration_year":"21","expiration_month":"12","allows_charges":true,"allows_payouts":true,"creation_date":"2021-04-03T10:17:16-06:00","bank_name":"Banamex","bank_code":"002"},"status":"completed","conciliated":false,"creation_date":"2021-04-03T10:17:56-06:00","operation_date":"2021-04-03T10:17:57-06:00","description":"Cargo
+        inicial a mi cuenta","error_message":null,"order_id":"k4msykutiaestjikvduy","amount":100.0,"currency":"MXN","customer":{"name":"Juan","last_name":"Vazquez
+        Juarez","email":"juan.vazquez@empresa.com.mx","phone_number":"4423456723","address":null,"creation_date":"2021-04-03T10:17:57-06:00","external_id":null,"clabe":null},"fee":{"amount":5.4,"tax":0.864,"currency":"MXN"},"method":"card"}]'
+  recorded_at: Sat, 03 Apr 2021 16:25:00 GMT
+recorded_with: VCR 6.0.0
