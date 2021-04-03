@@ -2,10 +2,10 @@
 
 require_relative '../../../test_helper'
 
-class CardsPostRequestTest < RequestTest
-  def test_create_card
-    VCR.use_cassette('test_create_card') do
-      request = Openpay::Cards::PostRequest.new do |req|
+class TokensPostRequestTest < RequestTest
+  def test_create_token
+    VCR.use_cassette('test_create_token') do
+      request = Openpay::Tokens::PostRequest.new do |req|
         req.body = @fixtures[:card]
       end
 

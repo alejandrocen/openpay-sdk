@@ -13,3 +13,5 @@ require 'openpay/version'
 
 require 'openpay/cards/post_request'
 require 'openpay/charges/get_request'
+require 'openpay/charges/post_request'
+require 'openpay/tokens/post_request'
