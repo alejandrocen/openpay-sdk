@@ -6,4 +6,4 @@ AllCops:
   SuggestExtensions: false
 
 Style/Documentation:
-  Enabled: false 
+  Enabled: false
