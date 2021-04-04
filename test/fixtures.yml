@@ -5,13 +5,13 @@
   :expiration_month: 12
   :cvv2: 110
 :charge:
-  :source_id: required
+  :source_id: kwoytmpdy3ctqlyooi5f
   :method: card
   :amount: 1000
   :currency: MXN
   :description: Cargo inicial a mi cuenta
-  :order_id: required
-  :device_session_id: required
+  :order_id: 666974727f7621ea602c9f29bb8490624e394cd9
+  :device_session_id: 03QKX08AUPvoJyxY6PP0Xu9kC7Mabusw
   :customer:
     :name: Juan
     :last_name: Vazquez Juarez

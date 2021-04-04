@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 require 'yaml'
-require 'securerandom'
 require 'vcr'
 require 'byebug'
 require 'minitest/autorun'
