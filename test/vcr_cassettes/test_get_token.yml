@@ -1,0 +1,54 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://sandbox-api.openpay.mx/v1/mxibgczgkhrnyyeg01kz/tokens/krnsmcqqypsft2xeftqt
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Basic c2tfZTRkMmY2OTMwNjNiNGZiOGExNTNhYjRiN2E4MWQ1NDc6
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Ruby - Openpay SDK v0.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Date:
+      - Sun, 04 Apr 2021 00:19:23 GMT
+      Content-Type:
+      - application/json;charset=UTF-8
+      Content-Length:
+      - '204'
+      Connection:
+      - keep-alive
+      Openpay-Request-Id:
+      - 4384d0f2-3f37-4fe4-a868-17382cc5a08c
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Pragma:
+      - no-cache
+      Expires:
+      - '0'
+      Strict-Transport-Security:
+      - max-age=31536000 ; includeSubDomains
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - DENY
+      X-Content-Type-Options:
+      - nosniff
+    body:
+      encoding: UTF-8
+      string: '{"id":"krnsmcqqypsft2xeftqt","card":{"card_number":"411111XXXXXX1111","holder_name":"Juan
+        Perez Ramirez","expiration_year":"21","expiration_month":"12","address":null,"creation_date":null,"brand":"visa"}}'
+  recorded_at: Sun, 04 Apr 2021 00:19:24 GMT
+recorded_with: VCR 6.0.0
