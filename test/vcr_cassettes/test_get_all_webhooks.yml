@@ -1,0 +1,53 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://sandbox-api.openpay.mx/v1/mxibgczgkhrnyyeg01kz/webhooks
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Basic c2tfZTRkMmY2OTMwNjNiNGZiOGExNTNhYjRiN2E4MWQ1NDc6
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Ruby - Openpay SDK v0.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Date:
+      - Thu, 08 Apr 2021 18:42:20 GMT
+      Content-Type:
+      - application/json;charset=UTF-8
+      Content-Length:
+      - '286'
+      Connection:
+      - keep-alive
+      Openpay-Request-Id:
+      - 2e5877c0-8189-4d38-93ea-b2e05400d421
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Pragma:
+      - no-cache
+      Expires:
+      - '0'
+      Strict-Transport-Security:
+      - max-age=31536000 ; includeSubDomains
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - DENY
+      X-Content-Type-Options:
+      - nosniff
+    body:
+      encoding: UTF-8
+      string: '[{"url":"https://webhook.site/de69d25a-7fce-440b-ae4b-9e9a29d490da","user":"test","id":"wqogx3xpqvy30526l4qj","force_host_ssl":false,"event_types":["charge.refunded","charge.failed","charge.cancelled","charge.created","chargeback.accepted"],"status":"verified","allow_redirects":false}]'
+  recorded_at: Thu, 08 Apr 2021 18:42:20 GMT
+recorded_with: VCR 6.0.0
