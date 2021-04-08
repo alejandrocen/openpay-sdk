@@ -3,15 +3,15 @@
 module Openpay
   class Client
     attr_reader :cards, :charges, :tokens, :webhooks
-    
+
     RESOURCES = {
       cards: Card,
       charges: Charge,
       tokens: Token,
-      webhooks: Webhook,
-    }
+      webhooks: Webhook
+    }.freeze
 
-    def initialize(environment, options = {})
+    def initialize(environment)
       @http_client = HttpClient.new(environment)
       define_resources
     end

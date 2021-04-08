@@ -3,7 +3,6 @@
 require_relative '../../test_helper'
 
 class ChargeTest < RequestTest
-
   def test_create_charge
     VCR.use_cassette('test_create_charge') do
       response = @client.charges.create(@fixtures[:charge])
@@ -38,7 +37,6 @@ class ChargeTest < RequestTest
       assert_equal(1, JSON.parse(response.body).count)
     end
   end
-
 
   def test_get_charges_by_transaction_id
     VCR.use_cassette('test_get_charges_by_transaction_id') do

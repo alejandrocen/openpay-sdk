@@ -2,7 +2,6 @@
 
 module Openpay
   class Card < Resource
-
     def create(body)
       request = Cards::PostRequest.new { |req| req.body = body }
       @client.execute(request)

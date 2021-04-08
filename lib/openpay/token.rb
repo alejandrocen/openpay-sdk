@@ -2,7 +2,6 @@
 
 module Openpay
   class Token < Resource
-
     def create(body)
       request = Tokens::PostRequest.new { |req| req.body = body }
       @client.execute(request)

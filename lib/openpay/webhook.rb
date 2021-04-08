@@ -2,7 +2,6 @@
 
 module Openpay
   class Webhook < Resource
-
     def create(body)
       request = Webhooks::PostRequest.new { |req| req.body = body }
       @client.execute(request)

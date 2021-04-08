@@ -3,7 +3,6 @@
 require_relative '../../test_helper'
 
 class TokenTest < RequestTest
-
   def test_create_token
     VCR.use_cassette('test_create_token') do
       response = @client.tokens.create(@fixtures[:card])
