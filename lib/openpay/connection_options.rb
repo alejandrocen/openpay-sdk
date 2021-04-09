@@ -3,7 +3,7 @@
 module Openpay
   class ConnectionOptions
     def self.default
-      { timeout: 90 }
+      { timeout: Openpay.timeout }
     end
 
     def self.from(options)

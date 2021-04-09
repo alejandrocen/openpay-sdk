@@ -2,7 +2,8 @@
 
 class RequestTest < Minitest::Test
   def setup
-    @client = Openpay::Client.new(environment)
+    Openpay.environment = environment
+    Openpay.timeout = 120
     @fixtures = YAML.load_file('test/fixtures.yml')
   end
 

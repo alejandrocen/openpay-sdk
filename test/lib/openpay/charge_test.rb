@@ -5,7 +5,7 @@ require_relative '../../test_helper'
 class ChargeTest < RequestTest
   def test_create_charge
     VCR.use_cassette('test_create_charge') do
-      response = @client.charges.create(@fixtures[:charge])
+      response = Openpay::Charge.create(@fixtures[:charge])
       assert_equal(200, response.status)
     end
   end
@@ -13,7 +13,7 @@ class ChargeTest < RequestTest
   def test_create_charge_with_invalid_source_id
     error = assert_raises(Openpay::ApiError) do
       VCR.use_cassette('test_create_charge_with_invalid_source_id') do
-        @client.charges.create(@fixtures[:charge])
+        Openpay::Charge.create(@fixtures[:charge])
       end
     end
 
@@ -25,14 +25,14 @@ class ChargeTest < RequestTest
 
   def test_get_charges
     VCR.use_cassette('test_get_charges') do
-      response = @client.charges.all
+      response = Openpay::Charge.list
       assert_equal(200, response.status)
     end
   end
 
   def test_get_charges_with_limit_param
     VCR.use_cassette('test_get_charges_with_limit_param') do
-      response = @client.charges.all(1)
+      response = Openpay::Charge.list(1)
       assert_equal(200, response.status)
       assert_equal(1, JSON.parse(response.body).count)
     end
@@ -41,7 +41,7 @@ class ChargeTest < RequestTest
   def test_get_charges_by_transaction_id
     VCR.use_cassette('test_get_charges_by_transaction_id') do
       transaction_id = 'tr6oykqjyjtwo9hia9fl'
-      response = @client.charges.find(transaction_id)
+      response = Openpay::Charge.retrive(transaction_id)
       assert_equal(200, response.status)
       assert_equal(transaction_id, JSON.parse(response.body)['id'])
     end
