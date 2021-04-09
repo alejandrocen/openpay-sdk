@@ -14,8 +14,8 @@ require 'openpay/version'
 
 require 'openpay/resource_actions/create'
 require 'openpay/resource_actions/list'
-require 'openpay/resource_actions/remove'
-require 'openpay/resource_actions/retrive'
+require 'openpay/resource_actions/delete'
+require 'openpay/resource_actions/find'
 
 require 'openpay/configuration'
 require 'openpay/card'

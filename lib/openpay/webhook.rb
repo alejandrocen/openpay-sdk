@@ -3,9 +3,9 @@
 module Openpay
   class Webhook
     extend ResourceActions::Create
-    extend ResourceActions::Retrive
+    extend ResourceActions::Find
     extend ResourceActions::List
-    extend ResourceActions::Remove
+    extend ResourceActions::Delete
     PATH = 'webhooks'
   end
 end

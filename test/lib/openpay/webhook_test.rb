@@ -13,7 +13,7 @@ class WebhookTest < RequestTest
   def test_get_webhook_by_id
     VCR.use_cassette('test_get_webhook_by_id') do
       webhook_id = 'wqogx3xpqvy30526l4qj'
-      response = Openpay::Webhook.retrive(webhook_id)
+      response = Openpay::Webhook.find(webhook_id)
       assert_equal(200, response.status)
       assert_equal(webhook_id, JSON.parse(response.body)['id'])
     end
@@ -30,7 +30,7 @@ class WebhookTest < RequestTest
   def test_delete_webhook_by_id
     VCR.use_cassette('test_delete_webhook_by_id') do
       webhook_id = 'wqogx3xpqvy30526l4qj'
-      response = Openpay::Webhook.remove(webhook_id)
+      response = Openpay::Webhook.delete(webhook_id)
       assert_equal(204, response.status)
     end
   end

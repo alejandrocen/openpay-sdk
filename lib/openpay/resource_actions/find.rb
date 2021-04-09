@@ -2,9 +2,9 @@
 
 module Openpay
   module ResourceActions
-    module Remove
-      def remove(id)
-        request = Request.new("#{self::PATH}/#{id}", :delete)
+    module Find
+      def find(id)
+        request = Request.new("#{self::PATH}/#{id}", :get)
         Client.execute(request)
       end
     end

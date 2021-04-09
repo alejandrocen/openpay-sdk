@@ -12,7 +12,7 @@ class TokenTest < RequestTest
 
   def test_get_token
     VCR.use_cassette('test_get_token') do
-      response = Openpay::Token.retrive('krnsmcqqypsft2xeftqt')
+      response = Openpay::Token.find('krnsmcqqypsft2xeftqt')
       assert_equal(200, response.status)
     end
   end

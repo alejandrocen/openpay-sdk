@@ -2,9 +2,9 @@
 
 module Openpay
   module ResourceActions
-    module Retrive
-      def retrive(id)
-        request = Request.new("#{self::PATH}/#{id}", :get)
+    module Delete
+      def delete(id)
+        request = Request.new("#{self::PATH}/#{id}", :delete)
         Client.execute(request)
       end
     end

@@ -3,7 +3,7 @@
 module Openpay
   class Token
     extend ResourceActions::Create
-    extend ResourceActions::Retrive
+    extend ResourceActions::Find
     extend ResourceActions::List
     PATH = 'tokens'
   end
