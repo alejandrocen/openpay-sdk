@@ -18,7 +18,6 @@ require 'openpay/resource_actions/remove'
 require 'openpay/resource_actions/retrive'
 
 require 'openpay/configuration'
-require 'openpay/resource'
 require 'openpay/card'
 require 'openpay/charge'
 require 'openpay/token'
