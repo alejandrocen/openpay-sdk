@@ -17,3 +17,13 @@
     :last_name: Vazquez Juarez
     :phone_number: 4423456723
     :email: juan.vazquez@empresa.com.mx
+:webhook:
+  :url: "https://webhook.site/de69d25a-7fce-440b-ae4b-9e9a29d490da"
+  :user: test
+  :password: testing
+  :event_types:
+    - charge.refunded
+    - charge.failed
+    - charge.cancelled
+    - charge.created
+    - chargeback.accepted

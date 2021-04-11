@@ -1,0 +1,49 @@
+---
+http_interactions:
+- request:
+    method: delete
+    uri: https://sandbox-api.openpay.mx/v1/mxibgczgkhrnyyeg01kz/webhooks/wqogx3xpqvy30526l4qj
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Basic c2tfZTRkMmY2OTMwNjNiNGZiOGExNTNhYjRiN2E4MWQ1NDc6
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Ruby - Openpay SDK v0.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 204
+      message: ''
+    headers:
+      Date:
+      - Thu, 08 Apr 2021 18:48:08 GMT
+      Connection:
+      - keep-alive
+      Openpay-Request-Id:
+      - b1caf389-100f-4a3d-811c-d43e9caa7ba2
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Pragma:
+      - no-cache
+      Expires:
+      - '0'
+      Strict-Transport-Security:
+      - max-age=31536000 ; includeSubDomains
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - DENY
+      X-Content-Type-Options:
+      - nosniff
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Thu, 08 Apr 2021 18:48:08 GMT
+recorded_with: VCR 6.0.0

@@ -12,7 +12,7 @@ module Openpay
       Faraday.new(url: @base_url) do |conn|
         conn.use Faraday::Response::RaiseError
         conn.options.timeout = @options[:timeout]
-        conn.basic_auth(@environment.client_secret, '')
+        conn.headers['Authorization'] = "Basic #{@environment.client_secret}"
         conn.headers['Content-Type'] = 'application/json'
         conn.headers['User-Agent'] = "Ruby - Openpay SDK v#{Openpay::VERSION}"
       end

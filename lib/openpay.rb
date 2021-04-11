@@ -2,6 +2,7 @@
 
 require 'json'
 require 'faraday'
+require 'forwardable'
 
 require 'openpay/connection_options'
 require 'openpay/connection'
@@ -11,8 +12,24 @@ require 'openpay/http_client'
 require 'openpay/request'
 require 'openpay/version'
 
-require 'openpay/cards/post_request'
-require 'openpay/charges/get_request'
-require 'openpay/charges/post_request'
-require 'openpay/tokens/post_request'
-require 'openpay/tokens/get_request'
+require 'openpay/resource_actions/create'
+require 'openpay/resource_actions/list'
+require 'openpay/resource_actions/delete'
+require 'openpay/resource_actions/find'
+
+require 'openpay/configuration'
+require 'openpay/card'
+require 'openpay/charge'
+require 'openpay/token'
+require 'openpay/webhook'
+require 'openpay/client'
+
+module Openpay
+  @config = Openpay::Configuration.setup
+
+  class << self
+    extend Forwardable
+    def_delegators :@config, :environment, :environment=
+    def_delegators :@config, :timeout, :timeout=
+  end
+end

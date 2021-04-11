@@ -1,0 +1,57 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://sandbox-api.openpay.mx/v1/mxibgczgkhrnyyeg01kz/webhooks
+    body:
+      encoding: UTF-8
+      string: '{"url":"https://webhook.site/de69d25a-7fce-440b-ae4b-9e9a29d490da","user":"test","password":"testing","event_types":["charge.refunded","charge.failed","charge.cancelled","charge.created","chargeback.accepted"]}'
+    headers:
+      Authorization:
+      - Basic c2tfZTRkMmY2OTMwNjNiNGZiOGExNTNhYjRiN2E4MWQ1NDc6
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Ruby - Openpay SDK v0.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 201
+      message: ''
+    headers:
+      Date:
+      - Thu, 08 Apr 2021 10:03:08 GMT
+      Content-Type:
+      - application/json;charset=UTF-8
+      Content-Length:
+      - '305'
+      Connection:
+      - keep-alive
+      Openpay-Request-Id:
+      - 72904303-d459-45c4-bedc-2a9b6367a780
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Pragma:
+      - no-cache
+      Expires:
+      - '0'
+      Strict-Transport-Security:
+      - max-age=31536000 ; includeSubDomains
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - DENY
+      X-Content-Type-Options:
+      - nosniff
+      Resource-Id:
+      - wqogx3xpqvy30526l4qj
+      Location:
+      - https://sandbox-api.openpay.mx/v1/mxibgczgkhrnyyeg01kz/webhooks/wqogx3xpqvy30526l4qj
+    body:
+      encoding: UTF-8
+      string: '{"url":"https://webhook.site/de69d25a-7fce-440b-ae4b-9e9a29d490da","user":"test","password":"testing","id":"wqogx3xpqvy30526l4qj","force_host_ssl":false,"event_types":["charge.refunded","charge.failed","charge.cancelled","charge.created","chargeback.accepted"],"status":"verified","allow_redirects":false}'
+  recorded_at: Thu, 08 Apr 2021 10:03:09 GMT
+recorded_with: VCR 6.0.0
