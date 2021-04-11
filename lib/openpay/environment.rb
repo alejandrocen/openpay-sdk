@@ -12,6 +12,10 @@ module Openpay
       @client_secret = client_secret
       @api_url = api_url
     end
+
+    def authorization
+      "Basic #{@client_secret}"
+    end
   end
 
   class SandboxEnvironment < Environment
