@@ -9,10 +9,11 @@ module Openpay
     end
 
     def execute(request)
-      @connection.send(request.http_method, request.path) do |conn|
+      response = @connection.send(request.http_method, request.path) do |conn|
         conn.params = request.params || {}
         conn.body = request.body.to_json if request.body
       end
+      Response.from(response)
     rescue Faraday::Error => e
       raise Error.from(e)
     end

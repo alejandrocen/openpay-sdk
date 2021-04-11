@@ -10,6 +10,7 @@ require 'openpay/environment'
 require 'openpay/error'
 require 'openpay/http_client'
 require 'openpay/request'
+require 'openpay/response'
 require 'openpay/version'
 
 require 'openpay/resource_actions/create'
