@@ -13,7 +13,7 @@ module Openpay
         conn.params = request.params || {}
         conn.body = request.body.to_json if request.body
       end
-    rescue StandardError => e
+    rescue Faraday::Error => e
       raise Error.from(e)
     end
   end
