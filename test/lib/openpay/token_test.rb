@@ -2,7 +2,7 @@
 
 require_relative '../../test_helper'
 
-class TokenTest < RequestTest
+class TokenTest < OpenpayTest
   def test_create_token
     VCR.use_cassette('test_create_token') do
       response = Openpay::Token.create(@fixtures[:card])

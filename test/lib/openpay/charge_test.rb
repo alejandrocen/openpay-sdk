@@ -2,7 +2,7 @@
 
 require_relative '../../test_helper'
 
-class ChargeTest < RequestTest
+class ChargeTest < OpenpayTest
   def test_create_charge
     VCR.use_cassette('test_create_charge') do
       response = Openpay::Charge.create(@fixtures[:charge])
