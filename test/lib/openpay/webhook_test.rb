@@ -2,7 +2,7 @@
 
 require_relative '../../test_helper'
 
-class WebhookTest < RequestTest
+class WebhookTest < OpenpayTest
   def test_create_webhook
     VCR.use_cassette('test_create_webhook') do
       response = Openpay::Webhook.create(@fixtures[:webhook])

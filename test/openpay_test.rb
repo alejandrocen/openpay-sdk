@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class RequestTest < Minitest::Test
+class OpenpayTest < Minitest::Test
   def setup
     Openpay.environment = environment
     Openpay.timeout = 120
