@@ -27,3 +27,13 @@
     - charge.cancelled
     - charge.created
     - chargeback.accepted
+:customer:
+  :name: Juan
+  :last_name: Vazquez Juarez
+  :email: juan.vazquez@empresa.com.mx
+  :requires_account: true
+:fee:
+  customer_id: ajvgvouwc4kmcxz8tukk
+  amount: 0.01
+  description: Cobro de comisión
+  order_id: 08ab0e5ca85cbe61ba748bc04fcae773

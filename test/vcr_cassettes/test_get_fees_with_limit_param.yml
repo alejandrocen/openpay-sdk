@@ -1,0 +1,54 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://sandbox-api.openpay.mx/v1/mxibgczgkhrnyyeg01kz/fees?limit=1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Basic c2tfZTRkMmY2OTMwNjNiNGZiOGExNTNhYjRiN2E4MWQ1NDc6
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Ruby - Openpay SDK v0.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Date:
+      - Mon, 12 Apr 2021 01:39:36 GMT
+      Content-Type:
+      - application/json;charset=UTF-8
+      Content-Length:
+      - '419'
+      Connection:
+      - keep-alive
+      Openpay-Request-Id:
+      - 8e31e11c-04c8-423a-87a8-5ef466d9703a
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Pragma:
+      - no-cache
+      Expires:
+      - '0'
+      Strict-Transport-Security:
+      - max-age=31536000 ; includeSubDomains
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - DENY
+      X-Content-Type-Options:
+      - nosniff
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        W3siaWQiOiJ0cnNncGo4Z3Z6ZXRkdXN2bzJ5ZyIsImF1dGhvcml6YXRpb24iOm51bGwsIm9wZXJhdGlvbl90eXBlIjoib3V0IiwidHJhbnNhY3Rpb25fdHlwZSI6ImZlZSIsInN0YXR1cyI6ImNvbXBsZXRlZCIsImNvbmNpbGlhdGVkIjp0cnVlLCJjcmVhdGlvbl9kYXRlIjoiMjAyMS0wNC0xMVQyMDoyNzo0OC0wNTowMCIsIm9wZXJhdGlvbl9kYXRlIjoiMjAyMS0wNC0xMVQyMDoyNzo0OC0wNTowMCIsImRlc2NyaXB0aW9uIjoiQ29icm8gZGUgY29taXNpw7NuIiwiZXJyb3JfbWVzc2FnZSI6bnVsbCwib3JkZXJfaWQiOiIwOGFiMGU1Y2E4NWNiZTYxYmE3NDhiYzA0ZmNhZTc3MyIsImN1c3RvbWVyX2lkIjoiYWp2Z3ZvdXdjNGttY3h6OHR1a2siLCJhbW91bnQiOjAuMDEsImN1cnJlbmN5IjoiTVhOIiwibWV0aG9kIjoiY3VzdG9tZXIifV0=
+  recorded_at: Mon, 12 Apr 2021 01:39:36 GMT
+recorded_with: VCR 6.0.0

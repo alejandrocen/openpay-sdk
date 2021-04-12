@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'json'
+require 'base64'
 require 'faraday'
 require 'forwardable'
 
@@ -19,11 +20,13 @@ require 'openpay/resource_actions/delete'
 require 'openpay/resource_actions/find'
 
 require 'openpay/configuration'
+require 'openpay/client'
 require 'openpay/card'
 require 'openpay/charge'
 require 'openpay/token'
 require 'openpay/webhook'
-require 'openpay/client'
+require 'openpay/fee'
+require 'openpay/customer'
 
 module Openpay
   @config = Openpay::Configuration.setup
