@@ -1,0 +1,54 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://sandbox-api.openpay.mx/v1/mxibgczgkhrnyyeg01kz/fees/trsgpj8gvzetdusvo2yg/refund
+    body:
+      encoding: UTF-8
+      string: '{"description":"Devolución de comisión"}'
+    headers:
+      Authorization:
+      - Basic c2tfZTRkMmY2OTMwNjNiNGZiOGExNTNhYjRiN2E4MWQ1NDc6
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Ruby - Openpay SDK v0.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Date:
+      - Mon, 12 Apr 2021 01:37:26 GMT
+      Content-Type:
+      - application/json;charset=UTF-8
+      Content-Length:
+      - '395'
+      Connection:
+      - keep-alive
+      Openpay-Request-Id:
+      - cebd52d3-3a48-42d5-87c5-1f851a9c848f
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Pragma:
+      - no-cache
+      Expires:
+      - '0'
+      Strict-Transport-Security:
+      - max-age=31536000 ; includeSubDomains
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - DENY
+      X-Content-Type-Options:
+      - nosniff
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJpZCI6InRyNmt6cGF6a3pxOXlveHV3MXYzIiwiYXV0aG9yaXphdGlvbiI6bnVsbCwib3BlcmF0aW9uX3R5cGUiOiJpbiIsInRyYW5zYWN0aW9uX3R5cGUiOiJyZWZ1bmQiLCJzdGF0dXMiOiJjb21wbGV0ZWQiLCJjb25jaWxpYXRlZCI6dHJ1ZSwiY3JlYXRpb25fZGF0ZSI6IjIwMjEtMDQtMTFUMjA6Mzc6MjUtMDU6MDAiLCJvcGVyYXRpb25fZGF0ZSI6IjIwMjEtMDQtMTFUMjA6Mzc6MjUtMDU6MDAiLCJkZXNjcmlwdGlvbiI6IkRldm9sdWNpw7NuIGRlIGNvbWlzacOzbiIsImVycm9yX21lc3NhZ2UiOm51bGwsIm9yZGVyX2lkIjpudWxsLCJjdXN0b21lcl9pZCI6ImFqdmd2b3V3YzRrbWN4ejh0dWtrIiwiYW1vdW50IjowLjAxLCJjdXJyZW5jeSI6Ik1YTiIsIm1ldGhvZCI6ImN1c3RvbWVyIn0=
+  recorded_at: Mon, 12 Apr 2021 01:37:26 GMT
+recorded_with: VCR 6.0.0
