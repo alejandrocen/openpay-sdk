@@ -1,0 +1,54 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://sandbox-api.openpay.mx/v1/mxibgczgkhrnyyeg01kz/customers
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Basic c2tfZTRkMmY2OTMwNjNiNGZiOGExNTNhYjRiN2E4MWQ1NDc6
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Ruby - Openpay SDK v0.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Date:
+      - Mon, 12 Apr 2021 04:33:26 GMT
+      Content-Type:
+      - application/json;charset=UTF-8
+      Content-Length:
+      - '480'
+      Connection:
+      - keep-alive
+      Openpay-Request-Id:
+      - 9387abd1-2a0f-4466-a1a9-473edd27b579
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Pragma:
+      - no-cache
+      Expires:
+      - '0'
+      Strict-Transport-Security:
+      - max-age=31536000 ; includeSubDomains
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - DENY
+      X-Content-Type-Options:
+      - nosniff
+    body:
+      encoding: UTF-8
+      string: '[{"id":"ajvgvouwc4kmcxz8tukk","name":"Juan","last_name":"Vazquez Juarez","email":"juan.vazquez@empresa.com.mx","phone_number":null,"status":"active","balance":100.00,"address":null,"creation_date":"2021-04-11T20:14:21-05:00","external_id":null,"clabe":null},{"id":"at4ia8zdxal88e90qcwv","name":"Juan","last_name":"Vazquez
+        Juarez","email":"juan.vazquez@empresa.com.mx","phone_number":null,"address":null,"creation_date":"2021-04-11T20:03:23-05:00","external_id":null,"clabe":null}]'
+  recorded_at: Mon, 12 Apr 2021 04:33:25 GMT
+recorded_with: VCR 6.0.0
