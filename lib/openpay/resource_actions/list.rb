@@ -10,9 +10,8 @@ module Openpay
         Client.execute(request)
       end
 
-      def list_by_customer(id)
-        # TODO: ADD REAL URL
-        request = Request.new("#{self::PATH}/#{id}", :get)
+      def list_by_customer(customer_id)
+        request = Request.new("customers/#{customer_id}/#{self::PATH}", :get)
         Client.execute(request)
       end
     end

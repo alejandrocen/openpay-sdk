@@ -10,9 +10,25 @@ class CardTest < OpenpayTest
     end
   end
 
+  def test_create_card_by_customer
+    VCR.use_cassette('test_create_card_by_customer') do
+      customer_id = 'acwktt0druqzlzuj0gtp'
+      response = Openpay::Card.create_by_customer(customer_id, @fixtures[:card])
+      assert_equal(201, response.status)
+    end
+  end
+
   def test_get_cards
     VCR.use_cassette('test_get_cards') do
       response = Openpay::Card.list
+      assert_equal(200, response.status)
+    end
+  end
+
+  def test_get_cards_by_customer
+    VCR.use_cassette('test_get_cards_by_customer') do
+      customer_id = 'acwktt0druqzlzuj0gtp'
+      response = Openpay::Card.list_by_customer(customer_id)
       assert_equal(200, response.status)
     end
   end
@@ -27,10 +43,28 @@ class CardTest < OpenpayTest
     end
   end
 
+  def test_find_card_by_customer
+    VCR.use_cassette('test_find_card_by_customer') do
+      customer_id = 'acwktt0druqzlzuj0gtp'
+      card_id = 'kpddux4emmzgxvhldy2v'
+      response = Openpay::Card.find_by_customer(customer_id, card_id)
+      assert_equal(200, response.status)
+    end
+  end
+
   def test_delete_card
     VCR.use_cassette('test_delete_card') do
       card_id = 'kwbsnkrsntqppnbamlkb'
       response = Openpay::Card.delete(card_id)
+      assert_equal(204, response.status)
+    end
+  end
+
+  def test_delete_card_by_customer
+    VCR.use_cassette('test_delete_card_by_customer') do
+      customer_id = 'acwktt0druqzlzuj0gtp'
+      card_id = 'kpddux4emmzgxvhldy2v'
+      response = Openpay::Card.delete_by_customer(customer_id, card_id)
       assert_equal(204, response.status)
     end
   end
