@@ -9,16 +9,16 @@ openpay-sdk$ docker build . -t openpay-sdk:latest
 
 ```bash
 openpay-sdk$ docker run --rm \
-    -e CLIENT_ID=mzdtln0bmtms6o3kck8f \
-    -e CLIENT_SECRET=sk_e568c42a6c384b7ab02cd47d2e407cab \
+    -e CLIENT_ID=$(CLIENT_ID) \
+    -e CLIENT_SECRET=$(CLIENT_SECRET) \
     openpay-sdk:latest rake test
 ```
 
 ## Run Tests Without Docker
 
 ```bash
-openpay-sdk$ export CLIENT_ID=mzdtln0bmtms6o3kck8f
-openpay-sdk$ export CLIENT_SECRET=sk_e568c42a6c384b7ab02cd47d2e407cab
+openpay-sdk$ export CLIENT_ID=$(CLIENT_ID)
+openpay-sdk$ export CLIENT_SECRET=$(CLIENT_SECRET)
 ```
 
 ```bash
@@ -41,8 +41,8 @@ openpay-sdk$ docker build . -t openpay-sdk:latest
 
 ```bash
  openpay-sdk$ docker run --rm -it \
-    -e CLIENT_ID=mzdtln0bmtms6o3kck8f \
-    -e CLIENT_SECRET=sk_e568c42a6c384b7ab02cd47d2e407cab \
+    -e CLIENT_ID=$(CLIENT_ID) \
+    -e CLIENT_SECRET=$(CLIENT_SECRET) \
     -v "$(pwd)":/app \
     openpay-sdk:latest sh
 ```
