@@ -7,6 +7,13 @@ module Openpay
         request = Request.new("#{self::PATH}/#{id}", :get)
         Client.execute(request)
       end
+
+      def find_by_customer(id)
+        # TODO: ADD REAL URL
+
+        request = Request.new("#{self::PATH}/#{id}", :get)
+        Client.execute(request)
+      end
     end
   end
 end
