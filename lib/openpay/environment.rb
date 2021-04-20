@@ -14,8 +14,7 @@ module Openpay
     end
 
     def authorization
-      basic_auth = Base64.strict_encode64("#{@client_secret}:")
-      "Basic #{basic_auth}"
+      "Basic #{@client_secret}"
     end
   end
 
